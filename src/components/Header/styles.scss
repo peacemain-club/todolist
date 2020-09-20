@@ -1,0 +1,19 @@
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  padding: 10px 20px;
+
+  h2 {
+
+  }
+  .right-wrapper {
+
+    button {
+      margin-right: 5px;
+    }
+  }
+}
