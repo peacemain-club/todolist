@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 
 import MainPage from './pages/MainPage';
+import AddPage from './pages/AddPage';
 
 import Header from './components/Header';
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <Header />
       <MainPage />
+      {/* <AddPage data={'777777'} /> */}
     </>
   );
 }
