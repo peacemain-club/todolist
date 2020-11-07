@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 
 import './styles.scss';
 
 function AddPage(props) {
   const [input, setInput] = useState('');
-  let [a, setA] = useState(8);
+
+  const history = useHistory();
 
   const handleInput = (e) => {
     setInput(e.target.value);
@@ -18,21 +20,15 @@ function AddPage(props) {
 
     // 투두리스트에 등록하는 함수
     console.log('success');
-    console.log('목록??');
     console.log(input);
+    history.push('/');
   };
-
-  // let a = 8;
-
-  setTimeout(() => {
-    a = 11;
-  }, 2000);
 
   return (
     <div className='add-page__background background'>
       <h3>할 일 추가</h3>
       <div className='list-selector'>
-        할 일 목록{a}
+        할 일 목록
         <div className='list-selector-dropdown'>
           <div className='list-selector-element'></div>
           <div className='list-selector-element'>학교에서 할 일</div>

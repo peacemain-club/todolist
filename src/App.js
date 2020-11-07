@@ -1,4 +1,6 @@
 import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 import './App.scss';
 
 import MainPage from './pages/MainPage';
@@ -8,11 +10,17 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <MainPage />
-      {/* <AddPage data={'777777'} /> */}
-    </>
+      <Switch>
+        <Route path='/' exact>
+          <MainPage />
+        </Route>
+        <Route path='/add' exact>
+          <AddPage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
