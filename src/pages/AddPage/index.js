@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom';
 
 import './styles.scss';
 
-function AddPage(props) {
+function AddPage({addTodo}) {
   const [input, setInput] = useState('');
 
   const history = useHistory();
@@ -19,8 +19,7 @@ function AddPage(props) {
     }
 
     // 투두리스트에 등록하는 함수
-    console.log('success');
-    console.log(input);
+    addTodo(input);
     history.push('/');
   };
 
